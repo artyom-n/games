@@ -11,6 +11,7 @@ import ico8 from '../../../assets/images/slides/slideB/ico-8.png'
 import ico9 from '../../../assets/images/slides/slideB/ico-9.png'
 import ButtonA from '../../buttons/buttonA/ButtonA';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
+import QuestionTabs from '../../questionTabs/QuestionTabs';
 
 const cards = [
   { name: 'Pragmatic', icon: ico2, isSelected: false },
@@ -58,6 +59,7 @@ const SlideB = () => {
 
   return (
     <>
+      <QuestionTabs />
       <div className={styles.titleWrapper}>
         <span className={styles.title}>
           {'pick up your favorite providers & games'}
@@ -72,7 +74,7 @@ const SlideB = () => {
                 onClick={() => toggleCard(index)}
                 key={index}
               >
-                <img src={card.icon} alt={card.name} />                
+                <img src={card.icon} alt={card.name} />
               </div>
             )
           })}
