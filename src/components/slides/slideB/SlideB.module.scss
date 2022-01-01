@@ -1,0 +1,52 @@
+.titleWrapper {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;    
+    display: flex;
+    justify-content: center;
+    margin-top: 36px
+}
+
+.title {
+    text-align: center;
+    max-width: 700px;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cardsWrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    flex-wrap: wrap;
+}
+
+.card {    
+    border-radius: 10px;
+    width: 174.15px;
+    height: 174.15px;
+    margin: 0 10px 36px 10px;
+    text-align: center;
+    cursor: pointer
+}
+
+.cardDefault {
+    @extend .card;
+    border: 1px solid #FFFFFF;
+    background: linear-gradient(#C1C8F0 0%, #EAEDFA 100%);    
+}
+
+.cardSelected {
+    @extend .card;
+    border: 1px solid #FFD900;
+    background: linear-gradient(#FFD900 0%, #FFBB00 100%);
+}
+
+.cardName {
+    color: #4D4D4D;
+    font-size: 18px;
+}

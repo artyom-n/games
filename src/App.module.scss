@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  font-family: 'Fredoka One', cursive;
+}
+
+.container {
+  background: url(./assets/images/app/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1080px;
+  padding-top: 46px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}

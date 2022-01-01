@@ -1,0 +1,21 @@
+.textContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.textWrapper {    
+    max-width: 480px;
+    text-align: center;
+}
+
+.bottomTextNormal {
+    font-size: 18px;    
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.bottomTextUnderlined {
+    text-decoration: underline;
+    cursor: pointer
+}
