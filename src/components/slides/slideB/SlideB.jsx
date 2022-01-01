@@ -10,12 +10,12 @@ import ButtonA from '../../buttons/buttonA/ButtonA';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 
 const cards = [
-  { name: 'Blackjack', icon: ico1, isSelected: false },
-  { name: 'Roulette', icon: ico2, isSelected: false },
-  { name: 'Baccarat', icon: ico3, isSelected: false },
-  { name: 'Poker', icon: ico4, isSelected: false },
-  { name: 'Dragon & Tiger', icon: ico5, isSelected: false },
-  { name: 'Slots', icon: ico6, isSelected: false }
+  { name: '1', icon: ico1, isSelected: false },
+  { name: '2', icon: ico2, isSelected: false },
+  { name: '3', icon: ico3, isSelected: false },
+  { name: '4', icon: ico4, isSelected: false },
+  { name: '5', icon: ico5, isSelected: false },
+  { name: '6', icon: ico6, isSelected: false }
 ];
 
 const SlideB = () => {
