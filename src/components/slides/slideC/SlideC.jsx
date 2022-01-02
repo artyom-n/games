@@ -25,7 +25,7 @@ const SlideC = () => {
           {answers.map((answer, index) => {
             return (
               <button
-                className={styles.btn}
+                className={styles.btnAnswer}
                 key={index}
               >
                 {answer}

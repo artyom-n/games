@@ -24,13 +24,13 @@
 .cardDefault {
     @extend .card;
     border: 1px solid #FFFFFF;
-    background: linear-gradient(#C1C8F0 0%, #EAEDFA 100%);    
+    background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);    
 }
 
 .cardSelected {
     @extend .card;
     border: 1px solid #FFD900;
-    background: linear-gradient(#FFD900 0%, #FFBB00 100%);
+    background: linear-gradient(180deg, #FFD900 0%, #FFBB00 100%);
 }
 
 .cardName {

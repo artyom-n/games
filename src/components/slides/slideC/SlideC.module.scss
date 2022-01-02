@@ -1,6 +1,8 @@
 .answerButtonsContainer {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .answerButtonsWrapper {
@@ -11,31 +13,47 @@
 .buttonWrapper {
     display: flex;
     justify-content: center;
+    margin-top: 0
 }
 
 .btn {
     width: 400px;
     height: 90px;    
     font-size: 30px;
-    font-family: 'Fredoka One', cursive;
-    color: #FFFFFF;
+    font-family: 'Fredoka One', cursive;    
     border: 0;
-    border-radius: 10px;
-    text-transform: capitalize;    
+    border-radius: 10px;        
+}
+
+.btnAnswer {
+    @extend .btn;
+    background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
+    color: #4D4D4D;
+    border: 1px solid #FFFFFF;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .btnActive {
     @extend .btn;
-    background: linear-gradient(#25A72E 0%, #79C523 100%);
+    background: linear-gradient(0deg, #25A72E -17.86%, #79C523 117.86%);
+    color: #FFFFFF;
+    text-transform: capitalize;
     cursor: pointer;
 }
 
 .btnActive:hover {
-    background: linear-gradient(#1EC229 0%, #85E31A 100%);
+    background: linear-gradient(0deg, #1EC229 -17.86%, #85E31A 117.86%);
+    text-transform: capitalize;
+    color: #FFFFFF;
 }
 
 .btnUnactive {
     @extend .btn;
     background-color: #99CC99;
+    text-transform: capitalize;
+    color: #FFFFFF;
     cursor: no-drop
 }
