@@ -1,3 +1,13 @@
+.answerButtonsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.answerButtonsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .buttonWrapper {
     display: flex;
     justify-content: center;
