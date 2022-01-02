@@ -17,6 +17,7 @@ import gameIco6 from '../../../assets/images/slides/slideB/games/ico-6.png'
 import gameIco7 from '../../../assets/images/slides/slideB/games/ico-7.png'
 import gameIco8 from '../../../assets/images/slides/slideB/games/ico-8.png'
 import ButtonA from '../../buttons/buttonA/ButtonA';
+import TopText from '../../texts/topText/TopText';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
 import { useSlide } from '../../../context/SlideProvider';
@@ -74,11 +75,9 @@ const SlideB = () => {
       <QuestionTabs
         question={'Question 1/5'}
       />
-      <div className={styles.titleWrapper}>
-        <span className={styles.title}>
-          {'Pick up your favorite providers & games'}
-        </span>
-      </div>
+      <TopText
+        text={'Pick up your favorite providers & games'}
+      />
       <div className={styles.subTitleContainer}>
         <div className={styles.subTitleWrapper}>
           <span className={styles.subTitle}>

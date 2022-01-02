@@ -10,6 +10,7 @@ import ButtonA from '../../buttons/buttonA/ButtonA';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import BottomTextB from '../../texts/bottomTextB/BottomTextB';
 import { useSlide } from '../../../context/SlideProvider';
+import TopText from '../../texts/topText/TopText';
 
 const cards = [
   { name: 'Blackjack', icon: ico1, isSelected: false },
@@ -46,11 +47,9 @@ const SlideA = () => {
 
   return (
     <>
-      <div className={styles.titleWrapper}>
-        <span className={styles.title}>
-          {'Pick any category, complete quiz & earn casino prize'}
-        </span>
-      </div>
+      <TopText
+        text={'Pick any category, complete quiz & earn casino prize'}
+      />
       <div className={styles.cardsContainer}>
         <div className={styles.cardsWrapper}>
           {categories.map((card, index) => {
