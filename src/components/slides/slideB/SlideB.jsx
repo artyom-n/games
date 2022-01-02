@@ -13,7 +13,7 @@ import ButtonA from '../../buttons/buttonA/ButtonA';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
 
-const cards = [
+const providersData = [
   { name: 'Pragmatic', icon: ico2, isSelected: false },
   { name: 'Booming', icon: ico3, isSelected: false },
   { name: 'EGT', icon: ico9, isSelected: false },
@@ -36,25 +36,25 @@ const cards = [
 
 const SlideB = () => {
 
-  const [categories, setCategories] = useState(cards);
+  const [providers, setProviders] = useState(providersData);
 
   const toggleCard = (i) => {
-    const newCategories = categories.map((category, index) => {
+    const newProviders = providers.map((provider, index) => {
       if (index === i) {
         return {
-          name: category.name,
-          icon: category.icon,
-          isSelected: !category.isSelected
+          name: provider.name,
+          icon: provider.icon,
+          isSelected: !provider.isSelected
         }
       } else {
         return {
-          name: category.name,
-          icon: category.icon,
-          isSelected: category.isSelected
+          name: provider.name,
+          icon: provider.icon,
+          isSelected: provider.isSelected
         }
       }
     })
-    setCategories(newCategories);
+    setProviders(newProviders);
   }
 
   return (
@@ -69,7 +69,7 @@ const SlideB = () => {
       </div>
       <div className={styles.cardsContainer}>
         <div className={styles.cardsWrapper}>
-          {categories.map((card, index) => {
+          {providers.map((card, index) => {
             return (
               <div
                 className={card.isSelected ? styles.cardSelected : styles.cardDefault}
