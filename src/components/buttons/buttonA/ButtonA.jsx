@@ -3,16 +3,13 @@ import styles from './ButtonA.module.scss';
 
 const ButtonA = ({ text }) => {
 
-    const { slide, updateSlide } = useSlide();
+    const { updateSlide } = useSlide();
 
     return (
         <div className={styles.buttonWrapper}>
             <button
                 className={styles.btnA}
-                onClick={() => {
-                    updateSlide('SlideB')
-                }
-                }
+                onClick={() => { updateSlide('SlideB') }}
             >
                 {text}
             </button>

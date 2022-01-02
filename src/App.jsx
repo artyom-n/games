@@ -6,15 +6,15 @@ import { useSlide } from './context/SlideProvider';
 
 const App = () => {
 
-  const {slide, updateSlide} = useSlide();
+  const { slide } = useSlide();
 
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
         <img src={logo} alt="WinOwn" />
       </div>
-        {slide === 'SlideA' && <SlideA />}
-        {slide === 'SlideB' && <SlideB />}   
+      {slide === 'SlideA' && <SlideA />}
+      {slide === 'SlideB' && <SlideB />}
     </div>
   );
 }

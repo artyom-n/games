@@ -1,5 +1,21 @@
-.questionTabsWrapper {
+.questionTabsContainer {
     display: flex;
+    justify-content: center;
+}
+
+.questionTabsWrapper {
+    text-align: center;
+}
+
+.questionTabsText {
+    font-size: 14px;
+    color: #FFD900;
+    text-transform: uppercase;      
+}
+
+.questionTabs {
+    display: flex;
+    margin-top: 11px;
 }
 
 .questionTab {

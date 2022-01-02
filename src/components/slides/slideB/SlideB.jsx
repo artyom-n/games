@@ -59,7 +59,9 @@ const SlideB = () => {
 
   return (
     <>
-      <QuestionTabs />
+      <QuestionTabs 
+        question={'Question 1/5'}
+      />
       <div className={styles.titleWrapper}>
         <span className={styles.title}>
           {'pick up your favorite providers & games'}
