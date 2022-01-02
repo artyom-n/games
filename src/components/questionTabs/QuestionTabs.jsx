@@ -14,7 +14,7 @@ const QuestionTabs = ({question}) => {
                     {question}
                 </span>
                 <div className={styles.questionTabs}>
-                    <div className={styles.questionTab} style={{opacity: slide === 'SlideB' && 1 || slide === 'SlideC' && 1}}></div>
+                    <div className={styles.questionTab} style={{opacity: (slide === 'SlideB' || slide === 'SlideC') && 1}}></div>
                     <div className={styles.questionTab} style={{opacity: slide === 'SlideD' && '1'}}></div>
                     <div className={styles.questionTab} style={{opacity: slide === 'SlideE' && '1'}}></div>
                     <div className={styles.questionTab} style={{opacity: slide === 'SlideF' && '1'}}></div>

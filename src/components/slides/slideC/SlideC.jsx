@@ -1,4 +1,4 @@
-import styles from './SlideC.module.scss';
+// import styles from './SlideC.module.scss';
 
 const SlideC = () => {  
 

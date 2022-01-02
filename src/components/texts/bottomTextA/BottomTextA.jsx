@@ -3,7 +3,7 @@ import styles from './BottomTextA.module.scss';
 
 const BottomTextA = ({ text }) => {
 
-    const { slide, updateSlide } = useSlide();
+    const { slide } = useSlide();
 
     return (
         <div
