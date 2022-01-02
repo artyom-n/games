@@ -75,7 +75,7 @@ const SlideA = () => {
       />
       <ButtonA
         text='Start'
-        onBtnAClick={() => { updateSlide('SlideB') }}
+        onBtnAClick={() => { updateSlide(2) }}
       />
       <BottomTextB
         normalText={'Already a member? '}

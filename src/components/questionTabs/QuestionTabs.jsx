@@ -3,9 +3,7 @@ import styles from './QuestionTabs.module.scss';
 
 const QuestionTabs = ({question}) => {
 
-    const { slide } = useSlide();
-
-    console.log(slide)
+    const { slide } = useSlide();    
 
     return (
         <div className={styles.questionTabsContainer}>
@@ -14,11 +12,11 @@ const QuestionTabs = ({question}) => {
                     {question}
                 </span>
                 <div className={styles.questionTabs}>
-                    <div className={styles.questionTab} style={{opacity: (slide === 'SlideB' || slide === 'SlideC') && 1}}></div>
-                    <div className={styles.questionTab} style={{opacity: slide === 'SlideD' && '1'}}></div>
-                    <div className={styles.questionTab} style={{opacity: slide === 'SlideE' && '1'}}></div>
-                    <div className={styles.questionTab} style={{opacity: slide === 'SlideF' && '1'}}></div>
-                    <div className={styles.questionTab} style={{opacity: slide === 'SlideG' && '1'}}></div>
+                    <div className={styles.questionTab} style={{opacity: (slide >= 2) && '1'}}></div>
+                    <div className={styles.questionTab} style={{opacity: (slide >= 3) && '1'}}></div>
+                    <div className={styles.questionTab} style={{opacity: (slide >= 4) && '1'}}></div>
+                    <div className={styles.questionTab} style={{opacity: (slide >= 5) && '1'}}></div>
+                    <div className={styles.questionTab} style={{opacity: (slide >= 6) && '1'}}></div>
                 </div>
             </div>
         </div>

@@ -108,7 +108,7 @@ const SlideB = () => {
         text={games ? 'Next' : 'Pick up games'}
         onBtnAClick={
           () => {
-            games ? updateSlide('SlideC') : setGames(true);
+            games ? updateSlide(3) : setGames(true);
           }
         }
       />

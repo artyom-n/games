@@ -14,9 +14,9 @@ const App = () => {
       <div className={styles.logo}>
         <img src={logo} alt="WinOwn" />
       </div>
-      {slide === 'SlideA' && <SlideA />}
-      {slide === 'SlideB' && <SlideB />}
-      {slide === 'SlideC' && <SlideC />}
+      {slide === 1 && <SlideA />}
+      {slide === 2 && <SlideB />}
+      {slide === 3 && <SlideC />}
     </div>
   );
 }

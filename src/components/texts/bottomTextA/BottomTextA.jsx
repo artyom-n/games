@@ -11,7 +11,7 @@ const BottomTextA = ({ text }) => {
         >
             <div
                 className={
-                    slide === 'SlideA' ?
+                    slide === 1 ?
                         styles.textWrapperSlideA
                         :
                         styles.textWrapper}

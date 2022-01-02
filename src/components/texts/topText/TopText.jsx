@@ -10,7 +10,10 @@ const TopText = ({ text }) => {
             className={styles.titleWrapper}
         >
             <span
-                className={slide === 'SlideA' && styles.titleMaxWidth700}
+                className={
+                    (slide === 1 && styles.titleMaxWidth700)
+                    || (slide === 3 && styles.titleMaxWidth730)
+                }
             >
                 {text}
             </span>
