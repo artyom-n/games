@@ -1,0 +1,31 @@
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 400px;
+    height: 90px;    
+    font-size: 30px;
+    font-family: 'Fredoka One', cursive;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 10px;
+    text-transform: capitalize;    
+}
+
+.btnActive {
+    @extend .btn;
+    background: linear-gradient(#25A72E 0%, #79C523 100%);
+    cursor: pointer;
+}
+
+.btnActive:hover {
+    background: linear-gradient(#1EC229 0%, #85E31A 100%);
+}
+
+.btnUnactive {
+    @extend .btn;
+    background-color: #99CC99;
+    cursor: no-drop
+}
