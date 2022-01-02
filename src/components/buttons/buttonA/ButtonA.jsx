@@ -1,15 +1,12 @@
-import { useSlide } from '../../../context/SlideProvider';
 import styles from './ButtonA.module.scss';
 
-const ButtonA = ({ text }) => {
-
-    const { updateSlide } = useSlide();
+const ButtonA = ({ text, onBtnAClick }) => {    
 
     return (
         <div className={styles.buttonWrapper}>
             <button
                 className={styles.btnA}
-                onClick={() => { updateSlide('SlideB') }}
+                onClick={onBtnAClick}
             >
                 {text}
             </button>

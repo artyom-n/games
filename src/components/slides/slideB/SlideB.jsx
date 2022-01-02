@@ -1,55 +1,65 @@
 import { useState } from 'react';
 import styles from './SlideB.module.scss';
-import ico1 from '../../../assets/images/slides/slideB/ico-1.png'
-import ico2 from '../../../assets/images/slides/slideB/ico-2.png'
-import ico3 from '../../../assets/images/slides/slideB/ico-3.png'
-import ico4 from '../../../assets/images/slides/slideB/ico-4.png'
-import ico5 from '../../../assets/images/slides/slideB/ico-5.png'
-import ico6 from '../../../assets/images/slides/slideB/ico-6.png'
-import ico7 from '../../../assets/images/slides/slideB/ico-7.png'
-import ico8 from '../../../assets/images/slides/slideB/ico-8.png'
-import ico9 from '../../../assets/images/slides/slideB/ico-9.png'
+import provIco1 from '../../../assets/images/slides/slideB/providers/ico-1.png'
+import provIco2 from '../../../assets/images/slides/slideB/providers/ico-2.png'
+import provIco3 from '../../../assets/images/slides/slideB/providers/ico-3.png'
+import provIco5 from '../../../assets/images/slides/slideB/providers/ico-5.png'
+import provIco6 from '../../../assets/images/slides/slideB/providers/ico-6.png'
+import provIco7 from '../../../assets/images/slides/slideB/providers/ico-7.png'
+import provIco8 from '../../../assets/images/slides/slideB/providers/ico-8.png'
+import provIco9 from '../../../assets/images/slides/slideB/providers/ico-9.png'
+import gameIco1 from '../../../assets/images/slides/slideB/games/ico-1.png'
+import gameIco2 from '../../../assets/images/slides/slideB/games/ico-2.png'
+import gameIco3 from '../../../assets/images/slides/slideB/games/ico-3.png'
+import gameIco4 from '../../../assets/images/slides/slideB/games/ico-4.png'
+import gameIco5 from '../../../assets/images/slides/slideB/games/ico-5.png'
+import gameIco6 from '../../../assets/images/slides/slideB/games/ico-6.png'
+import gameIco7 from '../../../assets/images/slides/slideB/games/ico-7.png'
+import gameIco8 from '../../../assets/images/slides/slideB/games/ico-8.png'
 import ButtonA from '../../buttons/buttonA/ButtonA';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
 
 const providersData = [
-  { name: 'Pragmatic', icon: ico2, isSelected: false },
-  { name: 'Booming', icon: ico3, isSelected: false },
-  { name: 'EGT', icon: ico9, isSelected: false },
-  { name: 'Pragmatic', icon: ico2, isSelected: false },
-  { name: 'Booming', icon: ico3, isSelected: false },
-  { name: 'EGT', icon: ico9, isSelected: false },
-  { name: 'Quickspin', icon: ico1, isSelected: false },
-  { name: 'Softbet', icon: ico6, isSelected: false },
-  { name: 'Ezugi', icon: ico7, isSelected: false },
-  { name: 'Quickspin', icon: ico1, isSelected: false },
-  { name: 'Softbet', icon: ico6, isSelected: false },
-  { name: 'Ezugi', icon: ico7, isSelected: false },
-  { name: 'Microgaming', icon: ico8, isSelected: false },
-  { name: 'Habanero', icon: ico5, isSelected: false },
-  { name: 'GoldHero', icon: ico4, isSelected: false },
-  { name: 'Microgaming', icon: ico8, isSelected: false },
-  { name: 'Habanero', icon: ico5, isSelected: false },
-  { name: 'GoldHero', icon: ico4, isSelected: false }
+  { provider: 'Pragmatic', provIco: provIco2, gameIco: gameIco1, isSelected: false },
+  { provider: 'Booming', provIco: provIco3, gameIco: gameIco2, isSelected: false },
+  { provider: 'EGT', provIco: provIco9, gameIco: gameIco3, isSelected: false },
+  { provider: 'Pragmatic', provIco: provIco2, gameIco: gameIco1, isSelected: false },
+  { provider: 'Booming', provIco: provIco3, gameIco: gameIco2, isSelected: false },
+  { provider: 'EGT', provIco: provIco9, gameIco: gameIco3, isSelected: false },
+  { provider: 'Quickspin', provIco: provIco1, gameIco: gameIco4, isSelected: false },
+  { provider: 'Softbet', provIco: provIco6, gameIco: gameIco5, isSelected: false },
+  { provider: 'Ezugi', provIco: provIco7, gameIco: gameIco6, isSelected: false },
+  { provider: 'Quickspin', provIco: provIco1, gameIco: gameIco4, isSelected: false },
+  { provider: 'Softbet', provIco: provIco6, gameIco: gameIco5, isSelected: false },
+  { provider: 'Ezugi', provIco: provIco7, gameIco: gameIco6, isSelected: false },
+  { provider: 'Microgaming', provIco: provIco8, gameIco: gameIco7, isSelected: false },
+  { provider: 'Habanero', provIco: provIco5, gameIco: gameIco8, isSelected: false },
+  { provider: 'Booming', provIco: provIco3, gameIco: gameIco2, isSelected: false },
+  { provider: 'Microgaming', provIco: provIco8, gameIco: gameIco7, isSelected: false },
+  { provider: 'Habanero', provIco: provIco5, gameIco: gameIco8, isSelected: false },
+  { provider: 'Booming', provIco: provIco3, gameIco: gameIco2, isSelected: false }
 ];
 
 const SlideB = () => {
 
   const [providers, setProviders] = useState(providersData);
+  const [games, setGames] = useState(false);
 
   const toggleCard = (i) => {
     const newProviders = providers.map((provider, index) => {
       if (index === i) {
         return {
-          name: provider.name,
-          icon: provider.icon,
+          provider: provider.provider,
+          provIco: provider.provIco,
+          gameIco: provider.gameIco,
           isSelected: !provider.isSelected
         }
       } else {
         return {
-          name: provider.name,
-          icon: provider.icon,
+          provider: provider.provider,
+          provIco: provider.provIco,
+          gameIco: provider.gameIco,
           isSelected: provider.isSelected
         }
       }
@@ -64,7 +74,7 @@ const SlideB = () => {
       />
       <div className={styles.titleWrapper}>
         <span className={styles.title}>
-          {'pick up your favorite providers & games'}
+          {'Pick up your favorite providers & games'}
         </span>
       </div>
       <div className={styles.cardsContainer}>
@@ -72,11 +82,11 @@ const SlideB = () => {
           {providers.map((card, index) => {
             return (
               <div
-                className={card.isSelected ? styles.cardSelected : styles.cardDefault}
+                className={card.isSelected ? styles.cardSelected : styles.card}
                 onClick={() => toggleCard(index)}
                 key={index}
               >
-                <img src={card.icon} alt={card.name} />
+                <img src={games ? card.gameIco : card.provIco} alt={card.provider} width={games && '120'}/>
               </div>
             )
           })}
@@ -86,7 +96,8 @@ const SlideB = () => {
         text={'Please select at least 3 game providers & earn (5 free spins)'}
       />
       <ButtonA
-        text='Pick up games'
+        text={games ? 'Next' : 'Pick up games'}
+        onBtnAClick={() => setGames(true)}
       />
     </>
   );

@@ -9,6 +9,7 @@ import ico6 from '../../../assets/images/slides/slideA/ico-6.png'
 import ButtonA from '../../buttons/buttonA/ButtonA';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import BottomTextB from '../../texts/bottomTextB/BottomTextB';
+import { useSlide } from '../../../context/SlideProvider';
 
 const cards = [
   { name: 'Blackjack', icon: ico1, isSelected: false },
@@ -21,32 +22,33 @@ const cards = [
 
 const SlideA = () => {
 
+  const { updateSlide } = useSlide();
   const [categories, setCategories] = useState(cards);
 
   const toggleCard = (i) => {
-      const newCategories = categories.map((category, index) => {
-        if (index === i) {
-            return { 
-              name: category.name, 
-              icon: category.icon, 
-              isSelected: !category.isSelected 
-            }
-        } else {
-          return { 
-            name: category.name, 
-            icon: category.icon, 
-            isSelected: category.isSelected 
-          }
+    const newCategories = categories.map((category, index) => {
+      if (index === i) {
+        return {
+          name: category.name,
+          icon: category.icon,
+          isSelected: !category.isSelected
         }
-      })
-      setCategories(newCategories);
+      } else {
+        return {
+          name: category.name,
+          icon: category.icon,
+          isSelected: category.isSelected
+        }
+      }
+    })
+    setCategories(newCategories);
   }
 
   return (
     <>
       <div className={styles.titleWrapper}>
         <span className={styles.title}>
-          {'pick any category, complete quiz & earn casino prize'}
+          {'Pick any category, complete quiz & earn casino prize'}
         </span>
       </div>
       <div className={styles.cardsContainer}>
@@ -74,6 +76,7 @@ const SlideA = () => {
       />
       <ButtonA
         text='Start'
+        onBtnAClick={() => { updateSlide('SlideB') }}
       />
       <BottomTextB
         normalText={'Already a member? '}
