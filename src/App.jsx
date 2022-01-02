@@ -2,6 +2,7 @@ import styles from './App.module.scss';
 import logo from './assets/images/app/logo.png'
 import SlideA from './components/slides/slideA/SlideA';
 import SlideB from './components/slides/slideB/SlideB';
+import SlideC from './components/slides/slideC/SlideC';
 import { useSlide } from './context/SlideProvider';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       </div>
       {slide === 'SlideA' && <SlideA />}
       {slide === 'SlideB' && <SlideB />}
+      {slide === 'SlideC' && <SlideC />}
     </div>
   );
 }

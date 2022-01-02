@@ -19,6 +19,7 @@ import gameIco8 from '../../../assets/images/slides/slideB/games/ico-8.png'
 import ButtonA from '../../buttons/buttonA/ButtonA';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
+import { useSlide } from '../../../context/SlideProvider';
 
 const providersData = [
   { provider: 'Pragmatic', provIco: provIco2, gameIco: gameIco1, isSelected: false },
@@ -43,6 +44,7 @@ const providersData = [
 
 const SlideB = () => {
 
+  const { updateSlide } = useSlide();
   const [providers, setProviders] = useState(providersData);
   const [games, setGames] = useState(false);
 
@@ -105,7 +107,11 @@ const SlideB = () => {
       />
       <ButtonA
         text={games ? 'Next' : 'Pick up games'}
-        onBtnAClick={() => setGames(true)}
+        onBtnAClick={
+          () => {
+            games ? updateSlide('SlideC') : setGames(true);
+          }
+        }
       />
     </>
   );
