@@ -4,7 +4,7 @@
     color: #FFFFFF;    
     display: flex;
     justify-content: center;
-    margin-top: 36px
+    margin-top: 22px
 }
 
 .title {
@@ -12,10 +12,30 @@
     max-width: 700px;
 }
 
+.subTitleContainer {
+    display: flex;    
+    justify-content: center;
+    margin-top: 22px
+}
+
+.subTitleWrapper {
+    font-size: 18px;
+    text-transform: uppercase;    
+    border: 1px solid #FFD900;
+    max-width: 400px;
+    border-radius: 10px;    
+    padding: 13px 43px
+}
+
+.subTitle {
+    text-align: center;   
+    color: #FFD900;
+}
+
 .cardsContainer {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 33px;
 }
 
 .cardsWrapper {

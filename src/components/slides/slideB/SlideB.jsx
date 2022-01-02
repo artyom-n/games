@@ -69,7 +69,7 @@ const SlideB = () => {
 
   return (
     <>
-      <QuestionTabs 
+      <QuestionTabs
         question={'Question 1/5'}
       />
       <div className={styles.titleWrapper}>
@@ -77,16 +77,24 @@ const SlideB = () => {
           {'Pick up your favorite providers & games'}
         </span>
       </div>
+      <div className={styles.subTitleContainer}>
+        <div className={styles.subTitleWrapper}>
+          <span className={styles.subTitle}>
+            {games ? 'Pick up favorite games' : 'Pick up favorite providers'}
+          </span>
+        </div>
+      </div>
       <div className={styles.cardsContainer}>
         <div className={styles.cardsWrapper}>
           {providers.map((card, index) => {
             return (
               <div
                 className={card.isSelected ? styles.cardSelected : styles.card}
+                style={{ backgroundColor: games && 'transparent' }}
                 onClick={() => toggleCard(index)}
                 key={index}
               >
-                <img src={games ? card.gameIco : card.provIco} alt={card.provider} width={games && '120'}/>
+                <img src={games ? card.gameIco : card.provIco} alt={card.provider} />
               </div>
             )
           })}
