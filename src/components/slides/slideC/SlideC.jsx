@@ -14,10 +14,14 @@ const answersData = [
 const SlideC = () => {
 
   const [answers, setAnswers] = useState(answersData);
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState(false);
 
-  const findCorrectAnswer = (i) => {    ;
+  const findCorrectAnswer = (i) => {
     const newAnswers = answers.map((answer, index) => {
       if (i === index) {
+        answer.value ?
+          setIsCorrectAnswer(true)
+          : setIsCorrectAnswer(false);
         return { name: answer.name, value: answer.value, isSelected: !answer.isSelected }
       } else {
         return { name: answer.name, value: answer.value, isSelected: false };
@@ -39,7 +43,15 @@ const SlideC = () => {
           {answers.map((answer, index) => {
             return (
               <button
-                className={answer.isSelected ? styles.btnAnswerSelected : styles.btnAnswerUnselected}
+                className={
+                  answer.isSelected ?
+                    (
+                      answer.value ?
+                        styles.btnAnswerSelectedTrue
+                        : styles.btnAnswerSelectedFalse
+                    )
+                    : styles.btnAnswerUnselected
+                }
                 key={index}
                 onClick={() => findCorrectAnswer(index)}
               >
@@ -54,7 +66,11 @@ const SlideC = () => {
       />
       <div className={styles.buttonNextWrapper}>
         <button
-          className={styles.btnNextUnactive}
+          className={
+            isCorrectAnswer ?
+              styles.btnNextActive
+              : styles.btnNextUnactive
+          }
         >
           Next
         </button>

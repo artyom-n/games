@@ -24,7 +24,7 @@
     cursor: pointer;
 }
 
-.btnAnswerSelected {
+.btnAnswerSelectedFalse {
     width: 400px;
     height: 90px;
     font-family: 'Fredoka One', cursive;
@@ -32,6 +32,20 @@
     background-color: #FF6666;
     color: #4D4D4D;
     border: 1px solid #FF7E7E;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.btnAnswerSelectedTrue {
+    width: 400px;
+    height: 90px;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #FFD900 0%, #FFBB00 100%);
+    color: #4D4D4D;
+    border: 1px solid #FFD900;
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 15px;
