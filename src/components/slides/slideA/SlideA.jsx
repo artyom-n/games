@@ -38,7 +38,7 @@ const SlideA = () => {
         return {
           name: category.name,
           icon: category.icon,
-          isSelected: category.isSelected
+          isSelected: false
         }
       }
     })

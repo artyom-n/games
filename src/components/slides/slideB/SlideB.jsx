@@ -68,7 +68,20 @@ const SlideB = () => {
       }
     })
     setProviders(newProviders);
-  }
+  };
+
+  const goToGames = () => {
+    const newProviders = providers.map((provider) => {
+      return {
+        provider: provider.provider,
+        provIco: provider.provIco,
+        gameIco: provider.gameIco,
+        isSelected: false
+      }
+    })
+    setGames(true)
+    setProviders(newProviders);
+  };
 
   return (
     <>
@@ -108,7 +121,7 @@ const SlideB = () => {
         text={games ? 'Next' : 'Pick up games'}
         onBtnAClick={
           () => {
-            games ? updateSlide(3) : setGames(true);
+            games ? updateSlide(3) : goToGames();
           }
         }
       />
