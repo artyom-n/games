@@ -15,6 +15,7 @@ const SlideC = () => {
 
   const [answers, setAnswers] = useState(answersData);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState(false);
+  const [isSelected, setIsSelected] = useState(false);
 
   const findCorrectAnswer = (i) => {
     const newAnswers = answers.map((answer, index) => {
@@ -53,7 +54,12 @@ const SlideC = () => {
                     : styles.btnAnswerUnselected
                 }
                 key={index}
-                onClick={() => findCorrectAnswer(index)}
+                onClick={() => {
+                  answer.isSelected ?
+                    setIsSelected(false)
+                    : setIsSelected(true)
+                  findCorrectAnswer(index)
+                }}
               >
                 {answer.name}
               </button>
@@ -61,9 +67,24 @@ const SlideC = () => {
           })}
         </div>
       </div>
-      <BottomTextA
-        text={'Select the answer to earn (10 Free Spins)'}
-      />
+      {isSelected ? (
+        <div className={styles.resultTextContainer}>
+          <div className={styles.resultTextWrapper}>
+            <span className={
+              isCorrectAnswer ?
+                styles.resultTrueAnswerText
+                : styles.resultFalseAnswerText
+            }>
+              {(isSelected && isCorrectAnswer) && 'You won 10 Free Spins!'}
+              {(isSelected && !isCorrectAnswer) && 'That’s not it, try again!'}
+            </span>
+          </div>
+        </div>
+      ) : (
+        <BottomTextA
+          text={'Select the answer to earn (10 Free Spins)'}
+        />
+      )}
       <div className={styles.buttonNextWrapper}>
         <button
           className={

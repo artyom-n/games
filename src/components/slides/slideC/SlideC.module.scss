@@ -52,6 +52,26 @@
     cursor: pointer;
 }
 
+.resultTextContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 29px;
+}
+
+.resultTextWrapper {
+    text-align: center;
+}
+
+.resultTrueAnswerText {
+    font-size: 36px;    
+    color: #79C523;
+}
+
+.resultFalseAnswerText {
+    font-size: 36px;    
+    color: #FF7E7E;
+}
+
 .buttonNextWrapper {
     display: flex;
     justify-content: center;
