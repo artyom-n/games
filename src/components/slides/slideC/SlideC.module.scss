@@ -10,23 +10,11 @@
     flex-direction: column;
 }
 
-.buttonWrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 0
-}
-
-.btn {
+.btnAnswerUnselected {
     width: 400px;
-    height: 90px;    
-    font-size: 30px;
-    font-family: 'Fredoka One', cursive;    
-    border: 0;
-    border-radius: 10px;        
-}
-
-.btnAnswer {
-    @extend .btn;
+    height: 90px;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 10px;
     background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
     color: #4D4D4D;
     border: 1px solid #FFFFFF;
@@ -36,24 +24,50 @@
     cursor: pointer;
 }
 
-.btnActive {
-    @extend .btn;
-    background: linear-gradient(0deg, #25A72E -17.86%, #79C523 117.86%);
-    color: #FFFFFF;
-    text-transform: capitalize;
+.btnAnswerSelected {
+    width: 400px;
+    height: 90px;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 10px;
+    background-color: #FF6666;
+    color: #4D4D4D;
+    border: 1px solid #FF7E7E;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 15px;
     cursor: pointer;
 }
 
-.btnActive:hover {
-    background: linear-gradient(0deg, #1EC229 -17.86%, #85E31A 117.86%);
-    text-transform: capitalize;
-    color: #FFFFFF;
+.buttonNextWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0
 }
 
-.btnUnactive {
+.btn {
+    width: 400px;
+    height: 90px;    
+    font-size: 30px;
+    border: 0;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 10px;        
+}
+
+.btnNextActive {
+    @extend .btn;
+    background: linear-gradient(0deg, #25A72E -17.86%, #79C523 117.86%);    
+    cursor: pointer;
+}
+
+.btnNextActive:hover {
+    @extend .btn;
+    background: linear-gradient(0deg, #1EC229 -17.86%, #85E31A 117.86%);
+}
+
+.btnNextUnactive {
     @extend .btn;
     background-color: #99CC99;
-    text-transform: capitalize;
-    color: #FFFFFF;
     cursor: no-drop
 }

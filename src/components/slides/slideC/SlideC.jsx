@@ -1,16 +1,30 @@
+import { useState } from 'react';
 import styles from './SlideC.module.scss';
 import TopText from '../../texts/topText/TopText';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 
-const answers = [
-  'Slots',
-  'Baccarat',
-  'Blackjack',
-  'Roulette'
+const answersData = [
+  { name: 'Slots', value: false, isSelected: false },
+  { name: 'Baccarat', value: false, isSelected: false },
+  { name: 'Blackjack', value: true, isSelected: false },
+  { name: 'Roulette', value: false, isSelected: false }
 ];
 
 const SlideC = () => {
+
+  const [answers, setAnswers] = useState(answersData);
+
+  const findCorrectAnswer = (i) => {    ;
+    const newAnswers = answers.map((answer, index) => {
+      if (i === index) {
+        return { name: answer.name, value: answer.value, isSelected: !answer.isSelected }
+      } else {
+        return { name: answer.name, value: answer.value, isSelected: false };
+      }
+    })
+    setAnswers(newAnswers);
+  };
 
   return (
     <>
@@ -25,10 +39,11 @@ const SlideC = () => {
           {answers.map((answer, index) => {
             return (
               <button
-                className={styles.btnAnswer}
+                className={answer.isSelected ? styles.btnAnswerSelected : styles.btnAnswerUnselected}
                 key={index}
+                onClick={() => findCorrectAnswer(index)}
               >
-                {answer}
+                {answer.name}
               </button>
             )
           })}
@@ -37,9 +52,9 @@ const SlideC = () => {
       <BottomTextA
         text={'Select the answer to earn (10 Free Spins)'}
       />
-      <div className={styles.buttonWrapper}>
+      <div className={styles.buttonNextWrapper}>
         <button
-          className={styles.btnUnactive}
+          className={styles.btnNextUnactive}
         >
           Next
         </button>
