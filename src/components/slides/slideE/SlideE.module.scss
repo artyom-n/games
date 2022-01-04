@@ -1,0 +1,45 @@
+.titleWrapper {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 22px
+}
+
+.exceptionBtnsContainer {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center; 
+}
+
+.exceptionBtnsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.exceptionBtnUnselected {
+    font-family: Fredoka One;
+    margin: 8px;
+    padding: 25px 60px;
+    background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
+    font-size: 24px;
+    color: #4D4D4D;
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.exceptionBtnSelected {
+    font-family: Fredoka One;
+    margin: 8px;
+    padding: 25px 60px;
+    background: linear-gradient(180deg, #FFD900 0%, #FFBB00 100%);
+    font-size: 24px;
+    color: #4D4D4D;
+    text-transform: uppercase;
+    border: 1px solid #FFD900;
+    border-radius: 10px;
+    cursor: pointer;
+}

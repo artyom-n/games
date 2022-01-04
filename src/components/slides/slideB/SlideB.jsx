@@ -100,15 +100,15 @@ const SlideB = () => {
       </div>
       <div className={styles.cardsContainer}>
         <div className={styles.cardsWrapper}>
-          {providers.map((card, index) => {
+          {providers.map((provider, index) => {
             return (
               <div
-                className={card.isSelected ? styles.cardSelected : styles.card}
+                className={provider.isSelected ? styles.cardSelected : styles.card}
                 style={{ backgroundColor: games && 'transparent' }}
                 onClick={() => toggleCard(index)}
                 key={index}
               >
-                <img src={games ? card.gameIco : card.provIco} alt={card.provider} />
+                <img src={games ? provider.gameIco : provider.provIco} alt={provider.provider} />
               </div>
             )
           })}

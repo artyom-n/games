@@ -4,6 +4,7 @@ import TopText from '../../texts/topText/TopText';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import ButtonA from '../../buttons/buttonA/ButtonA';
+import { useSlide } from '../../../context/SlideProvider';
 
 const bonusesData = [
     { name: 'FREE SPINS', isSelected: false },
@@ -19,6 +20,7 @@ const bonusesData = [
 
 const SlideD = () => {
 
+    const { updateSlide } = useSlide();
     const [bonuses, setBonuses] = useState(bonusesData);
 
     const toggleBonus = (i) => {
@@ -45,19 +47,17 @@ const SlideD = () => {
                 >
                     {bonuses.map((bonus, index) => {
                         return (
-                            <>
-                                <button
-                                    className={
-                                        bonus.isSelected ?
-                                            styles.bonusBtnSelected
-                                            : styles.bonusBtnUnselected
-                                    }
-                                    key={index}
-                                    onClick={() => toggleBonus(index)}
-                                >
-                                    {bonus.name}
-                                </button>
-                            </>
+                            <button
+                                className={
+                                    bonus.isSelected ?
+                                        styles.bonusBtnSelected
+                                        : styles.bonusBtnUnselected
+                                }
+                                key={index}
+                                onClick={() => toggleBonus(index)}
+                            >
+                                {bonus.name}
+                            </button>
                         );
                     })}
                 </div>
@@ -68,8 +68,7 @@ const SlideD = () => {
             <ButtonA
                 text={'Next'}
                 onBtnAClick={
-                    () => {
-                    }
+                    () => { updateSlide(5) }
                 }
             />
         </>
