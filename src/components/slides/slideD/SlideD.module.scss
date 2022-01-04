@@ -1,0 +1,39 @@
+.bonusBtnsContainer {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center; 
+}
+
+.bonusBtnsWrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bonusBtnUnselected {
+    font-family: Fredoka One;
+    margin: 8px;
+    padding: 20px 30px;
+    background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
+    font-size: 24px;
+    color: #4D4D4D;
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bonusBtnSelected {
+    font-family: Fredoka One;
+    margin: 8px;
+    padding: 20px 30px;
+    background: linear-gradient(180deg, #FFD900 0%, #FFBB00 100%);
+    font-size: 24px;
+    color: #4D4D4D;
+    text-transform: uppercase;
+    border: 1px solid #FFD900;
+    border-radius: 10px;
+    cursor: pointer;
+}

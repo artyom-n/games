@@ -3,6 +3,7 @@ import styles from './SlideC.module.scss';
 import TopText from '../../texts/topText/TopText';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
+import { useSlide } from '../../../context/SlideProvider';
 
 const answersData = [
   { name: 'Slots', value: false, isSelected: false },
@@ -13,6 +14,7 @@ const answersData = [
 
 const SlideC = () => {
 
+  const {updateSlide} = useSlide();
   const [answers, setAnswers] = useState(answersData);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
@@ -87,6 +89,9 @@ const SlideC = () => {
       )}
       <div className={styles.buttonNextWrapper}>
         <button
+          onClick={() => {
+            isCorrectAnswer && updateSlide(4);
+          }}
           className={
             isCorrectAnswer ?
               styles.btnNextActive
