@@ -27,38 +27,41 @@ const SlideF = () => {
                     Deposit Limit Per month
                 </span>
             </div>
-            <Range
-                step={5}
-                min={5}
-                max={200}
-                values={rangeValues}
-                onChange={(values) => setRangeValues(values)}
-                renderTrack={({ props, children }) => (
-                    <div
-                        {...props}
-                        style={{
-                            ...props.style,
-                            height: '6px',
-                            width: '100%',
-                            backgroundColor: '#ccc'
-                        }}
-                    >
-                        {children}
-                    </div>
-                )}
-                renderThumb={({ props }) => (
-                    <div
-                        {...props}
-                        style={{
-                            ...props.style,
-                            height: '42px',
-                            width: '42px',
-                            backgroundColor: '#999',
-                            borderRadius: '50%'
-                        }}
-                    />
-                )}
-            />
+            <div className={styles.rangeWrapper}>
+                <Range
+                    step={5}
+                    min={5}
+                    max={200}
+                    values={rangeValues}
+                    onChange={(values) => setRangeValues(values)}
+                    renderTrack={({ props, children }) => (
+                        <div
+                            {...props}
+                            style={{
+                                ...props.style,
+                                height: '14px',
+                                maxWidth: '529px',
+                                background: 'linear-gradient(89.79deg, #959CC3 -8.34%, #CED3EB 106.18%)',
+                                borderRadius: '10px'
+                            }}
+                        >
+                            {children}
+                        </div>
+                    )}
+                    renderThumb={({ props }) => (
+                        <div
+                            {...props}
+                            style={{
+                                ...props.style,
+                                height: '41px',
+                                width: '41px',
+                                background: 'radial-gradient(81.71% 81.71% at 40.24% 48.78%, #FFBB00 0%, #F3B200 100%)',
+                                borderRadius: '50%'
+                            }}
+                        />
+                    )}
+                />
+            </div>
             <BottomTextA
                 text={'Set up deposit limit per month to earn (10 Free Spins)'}
             />
