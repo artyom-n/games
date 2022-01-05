@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { Range } from 'react-range';
 import styles from './SlideF.module.scss';
 import QuestionTabs from '../../questionTabs/QuestionTabs';
 import TopText from '../../texts/topText/TopText';
@@ -8,6 +10,7 @@ import { useSlide } from '../../../context/SlideProvider';
 const SlideF = () => {
 
     const { updateSlide } = useSlide();
+    const [rangeValues, setRangeValues] = useState([50]);
 
     return (
         <>
@@ -24,6 +27,38 @@ const SlideF = () => {
                     Deposit Limit Per month
                 </span>
             </div>
+            <Range
+                step={5}
+                min={5}
+                max={200}
+                values={rangeValues}
+                onChange={(values) => setRangeValues(values)}
+                renderTrack={({ props, children }) => (
+                    <div
+                        {...props}
+                        style={{
+                            ...props.style,
+                            height: '6px',
+                            width: '100%',
+                            backgroundColor: '#ccc'
+                        }}
+                    >
+                        {children}
+                    </div>
+                )}
+                renderThumb={({ props }) => (
+                    <div
+                        {...props}
+                        style={{
+                            ...props.style,
+                            height: '42px',
+                            width: '42px',
+                            backgroundColor: '#999',
+                            borderRadius: '50%'
+                        }}
+                    />
+                )}
+            />
             <BottomTextA
                 text={'Set up deposit limit per month to earn (10 Free Spins)'}
             />
