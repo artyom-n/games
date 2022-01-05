@@ -13,6 +13,7 @@ const TopText = ({ text }) => {
                 className={
                     (slide === 1 && styles.titleMaxWidth700)
                     || (slide === 3 && styles.titleMaxWidth730)
+                    || (slide === 6 && styles.titleMaxWidth650)
                 }
             >
                 {text}
