@@ -10,6 +10,26 @@
 }
 
 .rangeWrapper {
-    // display: flex;
-    // justify-content: center;
+    padding-left: 33.33%;
+    padding-right: 33.33%;
+    margin-bottom: 30px
+}
+
+.cashInputWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.cashInput {
+    width: 33.33%;
+    height: 81px;
+    border: 1px solid #EAEDFA;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EAEDFA 100%);
+    border-radius: 10px;
+    font-family: Fredoka One;
+    color: #4D4D4D;
+    font-size: 48px;
+    outline: none;
+    text-align: center;
 }

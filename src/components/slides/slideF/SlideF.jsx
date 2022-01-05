@@ -62,6 +62,18 @@ const SlideF = () => {
                     )}
                 />
             </div>
+            <div className={styles.cashInputWrapper}>
+                <input
+                    className={styles.cashInput}
+                    type="number"
+                    min="5"
+                    max="200"
+                    value={rangeValues}
+                    onChange={(e) => {
+                        setRangeValues([e.target.value])
+                    }}
+                />
+            </div>
             <BottomTextA
                 text={'Set up deposit limit per month to earn (10 Free Spins)'}
             />
