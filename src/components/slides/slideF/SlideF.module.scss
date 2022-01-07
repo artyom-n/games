@@ -9,20 +9,33 @@
     margin-bottom: 30px
 }
 
+.minMaxCircle {
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
+    color: #959CC3;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rangeWrapper {
     padding-left: 33.33%;
     padding-right: 33.33%;
     margin-bottom: 30px
 }
 
-.cashInputWrapper {
+.cashInputDropdownWrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
 .cashInput {
-    width: 508px;
+    width: 425px;
     height: 80px;
     border: 1px solid #EAEDFA;
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEDFA 100%);
@@ -38,6 +51,7 @@
 .dropdownWrapper {
     width: 160px;
     height: 80px;
+    margin-left: 12px;
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEDFA 100%);
     border: 1px solid #EAEDFA;
     border-radius: 10px;

@@ -29,6 +29,7 @@ const SlideF = () => {
                 </span>
             </div>
             <div className={styles.rangeWrapper}>
+                {/* <span className={styles.minMaxCircle}>min</span> */}
                 <Range
                     step={5}
                     min={5}
@@ -62,8 +63,9 @@ const SlideF = () => {
                         />
                     )}
                 />
+                {/* <span className={styles.minMaxCircle}>max</span> */}
             </div>
-            <div className={styles.cashInputWrapper}>
+            <div className={styles.cashInputDropdownWrapper}>
                 <input
                     className={styles.cashInput}
                     type="number"
