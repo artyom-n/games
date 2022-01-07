@@ -22,8 +22,8 @@
 }
 
 .cashInput {
-    width: 33.33%;
-    height: 81px;
+    width: 508px;
+    height: 80px;
     border: 1px solid #EAEDFA;
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEDFA 100%);
     border-radius: 10px;
@@ -32,4 +32,22 @@
     font-size: 48px;
     outline: none;
     text-align: center;
+    padding: 0
 }
+
+.dropdownWrapper {
+    width: 160px;
+    height: 80px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #EAEDFA 100%);
+    border: 1px solid #EAEDFA;
+    border-radius: 10px;
+    font-family: Fredoka One;
+    font-size: 18px;
+    color:#4D4D4D;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    user-select: none;
+}
+

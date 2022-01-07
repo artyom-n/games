@@ -1,3 +1,4 @@
+import { useSlide } from '../../../context/SlideProvider';
 import { useState } from 'react';
 import { Range } from 'react-range';
 import styles from './SlideF.module.scss';
@@ -5,12 +6,12 @@ import QuestionTabs from '../../questionTabs/QuestionTabs';
 import TopText from '../../texts/topText/TopText';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import ButtonA from '../../buttons/buttonA/ButtonA';
-import { useSlide } from '../../../context/SlideProvider';
+import arrow from '../../../assets/images/dropdown/arrow-down.png'
 
 const SlideF = () => {
 
     const { updateSlide } = useSlide();
-    const [rangeValues, setRangeValues] = useState([50]);
+    const [rangeValue, setRangeValue] = useState([50]);
 
     return (
         <>
@@ -32,8 +33,8 @@ const SlideF = () => {
                     step={5}
                     min={5}
                     max={200}
-                    values={rangeValues}
-                    onChange={(values) => setRangeValues(values)}
+                    values={rangeValue}
+                    onChange={(value) => setRangeValue(value)}
                     renderTrack={({ props, children }) => (
                         <div
                             {...props}
@@ -68,11 +69,23 @@ const SlideF = () => {
                     type="number"
                     min="5"
                     max="200"
-                    value={rangeValues}
+                    value={rangeValue}
                     onChange={(e) => {
-                        setRangeValues([e.target.value])
+                        setRangeValue([e.target.value])
                     }}
                 />
+                <div
+                    className={styles.dropdownWrapper}
+                >
+                    <div>
+                        <span>
+                            eur
+                        </span>
+                    </div>
+                    <div>
+                        <img src={arrow} alt="" />
+                    </div>
+                </div>
             </div>
             <BottomTextA
                 text={'Set up deposit limit per month to earn (10 Free Spins)'}
