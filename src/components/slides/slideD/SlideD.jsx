@@ -35,9 +35,7 @@ const SlideD = () => {
 
     return (
         <>
-            <QuestionTabs
-                question={'Question 3/5'}
-            />
+            <QuestionTabs />
             <TopText
                 text={'What kind of bonus do u prefer?'}
             />

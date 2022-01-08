@@ -28,9 +28,7 @@ const SlideE = () => {
 
     return (
         <>
-            <QuestionTabs
-                question={'Question 4/5'}
-            />
+            <QuestionTabs />
             <div
                 className={styles.titleWrapper}
             >

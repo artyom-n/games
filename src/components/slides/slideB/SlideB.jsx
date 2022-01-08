@@ -85,9 +85,7 @@ const SlideB = () => {
 
   return (
     <>
-      <QuestionTabs
-        question={'Question 1/5'}
-      />
+      <QuestionTabs />
       <TopText
         text={'Pick up your favorite providers & games'}
       />

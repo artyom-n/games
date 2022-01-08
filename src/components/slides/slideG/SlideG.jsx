@@ -1,10 +1,18 @@
 import styles from './SlideG.module.scss';
 import ButtonA from '../../buttons/buttonA/ButtonA';
+import Confetti from 'react-confetti';
+import { useWindowSize } from '@react-hook/window-size';
 
 const SlideG = () => {
 
+    const [width, height] = useWindowSize();
+
     return (
         <>
+            <Confetti
+                width={width}
+                height={height}
+            />
             <div
                 className={styles.congratsTextWrapper}
             >

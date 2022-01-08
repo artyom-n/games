@@ -1,7 +1,7 @@
 import { useSlide } from '../../context/SlideProvider';
 import styles from './QuestionTabs.module.scss';
 
-const QuestionTabs = ({question}) => {
+const QuestionTabs = () => {
 
     const { slide } = useSlide();    
 
@@ -9,7 +9,7 @@ const QuestionTabs = ({question}) => {
         <div className={styles.questionTabsContainer}>
             <div className={styles.questionTabsWrapper}>
                 <span className={styles.questionTabsText}>
-                    {question}
+                    Question {slide-1}/5
                 </span>
                 <div className={styles.questionTabs}>
                     <div className={styles.questionTab} style={{opacity: (slide >= 2) && '1'}}></div>

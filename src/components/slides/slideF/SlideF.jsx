@@ -16,9 +16,7 @@ const SlideF = () => {
 
     return (
         <>
-            <QuestionTabs
-                question={'Question 5/5'}
-            />
+            <QuestionTabs />
             <TopText
                 text={'Please, set up your preferred betting range'}
             />

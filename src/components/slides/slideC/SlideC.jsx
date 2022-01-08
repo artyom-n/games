@@ -35,9 +35,7 @@ const SlideC = () => {
 
   return (
     <>
-      <QuestionTabs
-        question={'Question 2/5'}
-      />
+      <QuestionTabs />
       <TopText
         text={'Which casino game offers you the best statistical chance of winning?'}
       />
