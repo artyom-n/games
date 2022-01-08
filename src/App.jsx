@@ -6,6 +6,7 @@ import SlideC from './components/slides/slideC/SlideC';
 import SlideD from './components/slides/slideD/SlideD';
 import SlideE from './components/slides/slideE/SlideE';
 import SlideF from './components/slides/slideF/SlideF';
+import SlideG from './components/slides/slideG/SlideG';
 import { useSlide } from './context/SlideProvider';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       {slide === 4 && <SlideD />}
       {slide === 5 && <SlideE />}
       {slide === 6 && <SlideF />}
+      {slide === 7 && <SlideG />}
     </div>
   );
 }
