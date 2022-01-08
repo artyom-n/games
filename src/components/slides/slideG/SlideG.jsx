@@ -1,3 +1,4 @@
+import { useSlide } from '../../../context/SlideProvider';
 import styles from './SlideG.module.scss';
 import ButtonA from '../../buttons/buttonA/ButtonA';
 import Confetti from 'react-confetti';
@@ -5,6 +6,7 @@ import { useWindowSize } from '@react-hook/window-size';
 
 const SlideG = () => {
 
+    const { updateSlide } = useSlide();
     const [width, height] = useWindowSize();
 
     return (
@@ -36,6 +38,9 @@ const SlideG = () => {
             </div>
             <ButtonA
                 text={'EARN NOW'}
+                onBtnAClick={
+                    () => { updateSlide(1) }
+                }
             />
         </>
     );
