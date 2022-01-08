@@ -5,8 +5,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px
+    margin-top: 40px;
+    margin-bottom: 40px
 }
 
 .rangeWrapper {
@@ -19,6 +19,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    margin-left: 35px;
+    margin-right: 35px; 
 }
 
 .cashInput {
@@ -56,4 +58,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+@media (max-width: 900px) {
+    .rangeWrapper {
+        padding-left: 13.33%;
+        padding-right: 13.33%;
+        margin-bottom: 30px
+    }    
 }

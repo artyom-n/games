@@ -5,7 +5,9 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 40px
+    margin-top: 40px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 
 .earnTextWrapper {
@@ -15,7 +17,9 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 26px
+    margin-top: 26px;
+    margin-left: 35px;
+    margin-right: 35px;
 }
 
 .spinsTextWrapper {
@@ -25,5 +29,13 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+@media (max-width: 600px) {
+    .congratsTextWrapper {
+        font-size: 56px
+    }
 }

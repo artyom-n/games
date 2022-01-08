@@ -26,7 +26,7 @@ const SlideA = () => {
   const { updateSlide } = useSlide();
   const [categories, setCategories] = useState(cards);
 
-  const toggleCard = (i) => {
+  const toggleCategory = (i) => {
     const newCategories = categories.map((category, index) => {
       if (index === i) {
         return {
@@ -50,21 +50,25 @@ const SlideA = () => {
       <TopText
         text={'Pick any category, complete quiz & earn casino prize'}
       />
-      <div className={styles.cardsContainer}>
-        <div className={styles.cardsWrapper}>
-          {categories.map((card, index) => {
+      <div className={styles.categoriesContainer}>
+        <div className={styles.categoriesWrapper}>
+          {categories.map((category, index) => {
             return (
               <div
-                className={card.isSelected ? styles.cardSelected : styles.cardDefault}
-                onClick={() => toggleCard(index)}
+                className={category.isSelected ? styles.categorySelected : styles.categoryDefault}
+                onClick={() => toggleCategory(index)}
                 key={index}
               >
-                <img src={card.icon} alt={card.name} />
-                <span
-                  className={styles.cardName}
+                <img
+                  src={category.icon}
+                  alt={category.name}
+                  className={styles.categoryImage}
+                />
+                <div
+                  className={styles.categoryName}
                 >
-                  {card.name}
-                </span>
+                  {category.name}
+                </div>
               </div>
             )
           })}
