@@ -9,19 +9,6 @@
     margin-bottom: 30px
 }
 
-.minMaxCircle {
-    width: 59px;
-    height: 59px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
-    color: #959CC3;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .rangeWrapper {
     padding-left: 33.33%;
     padding-right: 33.33%;
@@ -65,3 +52,8 @@
     user-select: none;
 }
 
+.payLogosWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}

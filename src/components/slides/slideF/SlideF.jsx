@@ -6,7 +6,8 @@ import QuestionTabs from '../../questionTabs/QuestionTabs';
 import TopText from '../../texts/topText/TopText';
 import BottomTextA from '../../texts/bottomTextA/BottomTextA';
 import ButtonA from '../../buttons/buttonA/ButtonA';
-import arrow from '../../../assets/images/dropdown/arrow-down.png'
+import arrow from '../../../assets/images/slides/slideF/arrow-down.png';
+import payLogos from '../../../assets/images/slides/slideF/pay-logos.png'
 
 const SlideF = () => {
 
@@ -29,7 +30,6 @@ const SlideF = () => {
                 </span>
             </div>
             <div className={styles.rangeWrapper}>
-                {/* <span className={styles.minMaxCircle}>min</span> */}
                 <Range
                     step={5}
                     min={5}
@@ -63,7 +63,6 @@ const SlideF = () => {
                         />
                     )}
                 />
-                {/* <span className={styles.minMaxCircle}>max</span> */}
             </div>
             <div className={styles.cashInputDropdownWrapper}>
                 <input
@@ -88,6 +87,9 @@ const SlideF = () => {
                         <img src={arrow} alt="" />
                     </div>
                 </div>
+            </div>
+            <div className={styles.payLogosWrapper}>
+                <img src={payLogos} alt="pay-logos" />
             </div>
             <BottomTextA
                 text={'Set up deposit limit per month to earn (10 Free Spins)'}
