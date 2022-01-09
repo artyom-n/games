@@ -13,6 +13,26 @@ const SlideF = () => {
 
     const { updateSlide } = useSlide();
     const [rangeValue, setRangeValue] = useState([50]);
+    const [isDropdownOpened, setIsDropdownOpened] = useState(false);
+    const [currency, setCurrency] = useState('eur');
+
+    const toggleDropdown = () => {
+        setIsDropdownOpened(!isDropdownOpened);
+    };
+
+    const changeCurrency = (currencyString) => {
+        if (currency !== currencyString) {
+            setCurrency(currencyString);
+            setIsDropdownOpened(false);
+            setRangeValue(
+                [currencyString === 'eur' ?
+                    (rangeValue[0] / 1.14).toFixed(0)
+                    : (rangeValue[0] * 1.14).toFixed(0)]
+            );
+        } else {
+            setIsDropdownOpened(false);
+        }
+    };
 
     return (
         <>
@@ -31,7 +51,7 @@ const SlideF = () => {
                 <Range
                     step={5}
                     min={5}
-                    max={200}
+                    max={currency === 'eur' ? 200 : (200 * 1.14).toFixed(0)}
                     values={rangeValue}
                     onChange={(value) => setRangeValue(value)}
                     renderTrack={({ props, children }) => (
@@ -78,11 +98,40 @@ const SlideF = () => {
                 >
                     <div>
                         <span>
-                            eur
+                            {currency}
                         </span>
                     </div>
-                    <div>
+                    <div
+                        className={styles.dropdownArrowImageWrapper}
+                        onClick={() => toggleDropdown()}
+                    >
                         <img src={arrow} alt="" />
+                    </div>
+                    <div className={
+                        isDropdownOpened ?
+                            styles.dropdownContentVisible
+                            : styles.dropdownContentUnvisible
+                    }>
+                        <div
+                            className={styles.dropdownEurTab}
+                            onClick={() => changeCurrency('eur')}
+                        >
+                            <div
+                                className={styles.dropdownEurText}
+                            >
+                                eur
+                            </div>
+                        </div>
+                        <div
+                            className={styles.dropdownUsdTab}
+                            onClick={() => changeCurrency('usd')}
+                        >
+                            <div
+                                className={styles.dropdownUsdText}
+                            >
+                                usd
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

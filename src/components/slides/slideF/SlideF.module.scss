@@ -54,6 +54,44 @@
     user-select: none;
 }
 
+.dropdownArrowImageWrapper {
+    cursor: pointer
+}
+
+.dropdownContentVisible {
+    display: block
+}
+
+.dropdownContentUnvisible {    
+    display: none
+}
+
+.dropdownEurTab {
+    border-radius: 10px;
+    cursor: pointer
+}
+
+.dropdownEurText {
+    padding: 3px;
+}
+
+.dropdownUsdTab {
+    border-radius: 10px;
+    cursor: pointer
+}
+
+.dropdownUsdText {
+    padding: 3px;
+}
+
+.dropdownEurTab:hover {
+    background: linear-gradient(89.79deg, #959CC3 -8.34%, #CED3EB 106.18%);
+}
+
+.dropdownUsdTab:hover {
+    background: linear-gradient(89.79deg, #959CC3 -8.34%, #CED3EB 106.18%);
+}
+
 .payLogosWrapper {
     display: flex;
     justify-content: center;
