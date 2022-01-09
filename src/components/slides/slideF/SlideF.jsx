@@ -85,12 +85,24 @@ const SlideF = () => {
             <div className={styles.cashInputDropdownWrapper}>
                 <input
                     className={styles.cashInput}
-                    type="number"
-                    min="5"
-                    max="200"
+                    type={'number'}
+                    min={'5'}
+                    max={currency === 'eur' ? 200 : (200 * 1.14).toFixed(0)}
                     value={rangeValue}
                     onChange={(e) => {
-                        setRangeValue([e.target.value])
+                        if (currency === 'eur') {
+                            if (e.target.value > 200) {
+                                setRangeValue([200]);
+                            } else {
+                                setRangeValue([e.target.value]);
+                            }
+                        } else if (currency === 'usd') {
+                            if (e.target.value > 228) {
+                                setRangeValue([228]);
+                            } else {
+                                setRangeValue([e.target.value]);
+                            }
+                        }
                     }}
                 />
                 <div
